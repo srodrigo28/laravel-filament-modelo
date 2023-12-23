@@ -3,17 +3,20 @@
 ```
 https://www.youtube.com/watch?v=-bnMf-sSbrg
 ```
+
 #### 1 Criando projeto Laravel
+* 1. 1 caso tenha o composer instalado na maquina
 ```
 composer create laravel/laravel clean-laravel
 ```
 
-#### Entrando dentro da pasta do projeto Executando
+* 1. 2 caso tenha o composer instalado na maquina
 ```
 php artisan serve
 ```
 
-#### Caso tenha baixado do GitHub
+
+#### 2 Caso tenha baixado do GitHub
 * 1. Entrar na pasta do projeto
 ```
 composer install
@@ -24,24 +27,23 @@ composer install
 php artisan serve
 ```
 
-#### 2 Instalando o Laravel Filament
-1. Link do site 
+#### 3 Instalando o Laravel Filament
+3. 1 Link do site 
 ```
 https://filamentphp.com/docs/2.x/admin/installation
 ```
 
-2. Dependências
-    * 2. 1 Dependências 1
+3. 2 Dependências
     ```
     composer require filament/filament:"^2.0"
     ```
 
-    * 2. 5 Rodar o comando
+3. 3 Rodar o comando
     ```
     composer require doctrine/dbal --dev
     ```
 
-    * 2. 3  Adicionar regra no arquivo --> composer.json
+3. 4  Adicionar regra no arquivo --> composer.json
     ```
         "post-autoload-dump": [
             // ...
@@ -49,24 +51,22 @@ https://filamentphp.com/docs/2.x/admin/installation
         ],
     ```
 
-    * 2. 4 Rodar o arquivo de configuração
+3. 5 Rodar o arquivo de configuração
     php artisan vendor:publish --tag=filament-config
 
-3. Criando uma migration e seeds factory
+#### 4 Criando Models e Migration
+* 4. 1 Criando uma migration
+* 4. 2 Criando uma Model
 
-#### 3 Criando Models e Migration
-* 3. 1 Criando uma migration
-* 3. 2 Criando uma Model
-
-#### 4 Criando Seeds e Factory
-* 4. 1 configurando uma seeder dentro da pasta database
-* 4. 2 configurando a factory para colocar o primeiro registro
-* 4. 3 rodando a migration e seeder
+#### 5 Criando Seeds e Factory
+* 5. 1 configurando uma seeder dentro da pasta database
+* 5. 2 configurando a factory para colocar o primeiro registro
+* 5. 3 rodando a migration e seeder
 ```
 php artisan migrate --seed
 ```
 
-#### 5 Gerando Entidades
+#### 6 Gerando Entidades com as Views do Filament
 ```
     php artisan make:filament-resource User --generate --simple
 ```
